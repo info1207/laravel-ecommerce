@@ -32,7 +32,8 @@ Konfigurasi database
 * Copy isi dari file `.env.example` lalu paste di dalam file `.env`
 * Isi informasi database : `DB_DATABASE`, `DB_USERNAME` dan `DB_PASSWORD`
 
-Jalankan perintah dibawah untuk menghasilkan key
+Jalankan perintah dibawah untuk mephp -v
+nghasilkan key
 ```
 php artisan key:generate
 ```
