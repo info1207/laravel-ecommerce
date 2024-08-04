@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Myroti</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -30,25 +30,23 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#spark-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="/">
-                    Laravel
-                </a>
+                <a lass="navbar-brand" href="/"><img src="{{ url('/img/ico.png')}}" class="img-rounded" href="/"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="spark-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/home">Home</a></li>
+                </ul>
+                 <ul class="nav navbar-nav">
+                    <li><a href="{{ route('products.index') }}">Products</a></li>
+                </ul>
+                 <ul class="nav navbar-nav">
+                    <li><a href="{{ route('categories.index') }}">Categories</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                   <li><a href="/contact">Contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -62,8 +60,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="/products"><i class="fa fa-btn fa-tags"></i>Products</a></li>
+                                <li><a href="/categories"><i class="fa fa-btn fa-tags"></i>Categories</a></li>
+                                <li><a href="/contact"><i class="fa fa-btn fa-user"></i>Contact</a></li>
                                 <li><a href="/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                     @endif
