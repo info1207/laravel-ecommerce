@@ -52,7 +52,7 @@
                 <div class="panel-heading"><h3>Contact us through this form!</h3></div>
                     <div class="panel-body">
                         <!-- START FORM -->
-                        <form action="{{ url('contact')}}" method='post'>
+                        <form action="{{ url('contact')}}" method='POST'>
                         {{ csrf_field() }}
                             <div class="container">
                                 <div class="my-3 p-3 bg-body rounded shadow-sm">
