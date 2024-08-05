@@ -30,11 +30,15 @@
                         <tr>
                             <td>
                             @foreach($category->products as $product)
-                                    <span class="label label-warning "></i>{{ $product->name }}</span>
+                            <div style="font-size:120%">
+                                <span class="label label-warning "></i>{{ $product->name }}</span>
+                            </div>
                             @endforeach
                             </td>
                             <td>
-                                <span class="label label-primary"><i class="fa fa-btn fa-tags"></i>{{ $category->title }}</span>
+                                <div style="font-size:120%">
+                                    <span class="label label-primary"><i class="fa fa-btn fa-tags"></i>{{ $category->title }}</span>
+                                </div>
                             </td>
                             <td>{{ $category->parent ? $category->parent->title : '' }}</td>
                             <td>

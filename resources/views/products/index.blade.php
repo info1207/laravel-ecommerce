@@ -43,10 +43,18 @@
 						</td>
 						@endif
 						<td></td>
-						<td>{{ $product->price }}</td>
+						<td>
+                            <div style="font-size:150%">
+                                <a  class="btn btn-warning btn">
+                                 @currency($product->price)
+                                </a>
+                            </div>
+						</td>
 						<td>
 							@foreach($product->categories as $category)
-							<span class="label label-primary"><i class="fa fa-btn fa-tags"></i>{{ $category->title }}</span>
+							<div style="font-size:120%">
+							    <a href="{{ route('categories.index', $category) }}" class="fa fa-btn fa-tags">{{ $category->title }}</a>
+							<div>
 							@endforeach
 						</td>
 						<td>
