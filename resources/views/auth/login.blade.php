@@ -50,9 +50,18 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#contohModal">
                                     <i class="fa fa-btn fa-sign-in"></i>Login
                                 </button>
+                                <div class="modal fade" id="contohModal" role="dialog" arialabelledby="modalLabel" area-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                         <img src="{{ url('/img/login.gif')}}" width="200" height="150" alt="login">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
 
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
                             </div>

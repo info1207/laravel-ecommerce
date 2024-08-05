@@ -27,7 +27,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('contact.create');
+        //
     }
 
     /**
@@ -52,8 +52,7 @@ class ContactController extends Controller
             'message' => $request->message,
         ];
         $contact = contact::create($data);
-
-        return redirect()->route('contact.create');
+        return redirect()->to('contact')->with('success', 'Your message has been sent!');
     }
 
     /**

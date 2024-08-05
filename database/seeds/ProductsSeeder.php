@@ -65,6 +65,7 @@ class ProductsSeeder extends Seeder
         $to = public_path('img' . DIRECTORY_SEPARATOR);
         File::copy($from . 'cover.jpg', $to . 'cover.jpg');
         File::copy($from . 'ico.png', $to . 'ico.png');
+        File::copy($from . 'login.gif', $to . 'login.gif');
         File::copy($from . 'tawarfunwari.jpg', $to . 'tawarfunwari.jpg');
         File::copy($from . 'tawargandum.jpg', $to . 'tawargandum.jpg');
         File::copy($from . 'tawarreguler.jpg', $to . 'tawarreguler.jpg');
