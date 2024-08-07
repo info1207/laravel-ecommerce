@@ -34,6 +34,7 @@ class ProductsRequest extends Request
         }
         $rules['model'] = 'required';
         $rules['price'] = 'required|numeric|min:1000';
+        $rules['desc'] = 'required';
         return $rules;
     }
 }

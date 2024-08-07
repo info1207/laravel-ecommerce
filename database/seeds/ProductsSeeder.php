@@ -23,19 +23,23 @@ class ProductsSeeder extends Seeder
             'name' => 'Roti Tawar Funwari',
             'model' => 'Funwari',
             'photo' => 'tawarfunwari.jpg',
-            'price' => 12500
+            'price' => 12500,
+            'desc' => 'Test deskripsi'
+
         ]);
         $tawar2 = Product::create([
             'name' => 'Roti Tawar Gandum',
             'model' => 'Gandum',
             'photo' => 'tawargandum.jpg',
-            'price' => 15500
+            'price' => 15500,
+            'desc' => 'Test deskripsi'
         ]);
         $tawar3 = Product::create([
             'name' => 'Roti Tawar Reguler',
             'model' => 'Reguler',
             'photo' => 'tawarreguler.jpg',
-            'price' => 12000
+            'price' => 12000,
+            'desc' => 'Test deskripsi'
         ]);
         $tawar->products()->saveMany([$tawar1, $tawar2, $tawar3]);
 
@@ -44,19 +48,22 @@ class ProductsSeeder extends Seeder
             'name' => 'Roti Sobek Coklat',
             'model' => 'Sobek',
             'photo' => 'sobekcoklat.jpg',
-            'price' => 14000
+            'price' => 14000,
+            'desc' => 'Test deskripsi'
         ]);
         $sobek2 = Product::create([
             'name' => 'Roti Sobek Keju',
             'model' => 'Sobek',
             'photo' => 'sobekkeju.jpg',
-            'price' => 14000
+            'price' => 14000,
+            'desc' => 'Test deskripsi'
         ]);
         $sobek3 = Product::create([
             'name' => 'Roti Sobek Susu',
             'model' => 'Sobek',
             'photo' => 'sobeksusu.jpg',
-            'price' => 14000
+            'price' => 14000,
+            'desc' => 'Test deskripsi'
         ]);
         $sobek->products()->saveMany([$sobek1, $sobek2, $sobek3]);
 

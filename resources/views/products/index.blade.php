@@ -23,6 +23,7 @@
 						<th></th>
 						<th>Price</th>
 						<th>Category</th>
+						<th>Desc</th>
 						<th></th>
 					</tr>
 				</thead>
@@ -57,6 +58,9 @@
 							<div>
 							@endforeach
 						</td>
+						<td>
+						    <span class="label label-danger">{{ $product->desc }}</span>
+                        </td>
 						<td>
 							@if (Auth::check() && Auth::user()->role == "admin")
 							{!! Form::model($product, ['route' => ['products.destroy', $product], 'method' => 'delete', 'class' => 'form-inline']) !!}

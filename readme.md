@@ -10,6 +10,8 @@ _Mengacu pada semantyc versionning_
 2. Composer Package Manager
 3. NodeJS dan NPM
 4. Gulp
+5. Windows build tools 2017
+6. Windows SDK 8.1
 
 ## Cara menjalankan aplikasi
 Download source code nya di

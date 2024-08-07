@@ -33,7 +33,7 @@ class ProductsController extends Controller
 
     public function store(ProductsRequest $request)
     {
-        $data = $request->only('name', 'model', 'price');
+        $data = $request->only('name', 'model', 'price','desc');
         if ($request->hasFile('photo')) {
             $data['photo'] = $this->saveFile($request->file('photo'));
         }
@@ -57,7 +57,7 @@ class ProductsController extends Controller
     public function update(ProductsRequest $request, $id)
     {
         $product = Product::findOrFail($id);
-        $data = $request->only('name', 'model', 'price');
+        $data = $request->only('name', 'model', 'price','desc');
         if ($request->hasFile('photo')) {
             $data['photo'] = $this->saveFile($request->file('photo'));
             if ($product->photo !== '') $this->deleteFile($request->file('photo'));

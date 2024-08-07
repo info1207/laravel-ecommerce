@@ -10,6 +10,12 @@
     {!! $errors->first('model', '<p class="help-block">:message</p>') !!}
 </div>
 
+<div class="form-group {!! $errors->has('desc') ? 'has-error' : '' !!}">
+    {!! Form::label('desc', 'Desc') !!}
+    {!! Form::text('desc', null, ['class' => 'form-control']) !!}
+    {!! $errors->first('desc', '<p class="help-block">:message</p>') !!}
+</div>
+
 <div class="form-group {!! $errors->has('price') ? 'has-error' : '' !!}">
     {!! Form::label('price', 'Price') !!}
     {!! Form::text('price', null, ['class' => 'form-control']) !!}
